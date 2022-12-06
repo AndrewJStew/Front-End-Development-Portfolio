@@ -1,0 +1,93 @@
+:root {
+    --basefont: sans-serif;
+}
+
+body {
+    background: #ececec;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin: 0px 5%;
+}
+
+#header h1 {
+    width: 25%;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+#header p {
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+#boxgrid {
+    margin: 0px 5%;
+    display: grid;
+    min-height: 900px;
+    height: 70vh;
+    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "pfp bx1 bx1"
+        "abt bx2 bx3"
+        "abt bx4 bx5";
+}
+
+#about {
+    grid-area: abt;
+}
+
+#profileimage {
+    grid-area: pfp;
+    background-image: url(./Images/profile_image.png);
+    background-size: contain;
+}
+
+#box1 {
+    grid-area: bx1;
+    background-image: url(./Images/02-portfolio-4.jpg)
+}
+
+#box2 {
+    grid-area: bx2;
+    background-image: url(./Images/02-portfolio-1.jpg);
+}
+
+#box3 {
+    grid-area: bx3;
+    background-image: url(./Images/02-portfolio-2.jpg);
+}
+
+#box4 {
+    grid-area: bx4;
+    background-image: url(./Images/02-portfolio-3.jpg);
+}
+
+#box5 {
+    grid-area: bx5;
+    background-image: url(./Images/02-run-buddy.jpg);
+}
+
+.boxgridarea {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+    cursor: pointer;
+    align-content: end;
+}
+
+/*footer area*/
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    min-height: 10vh;
+}
