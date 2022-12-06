@@ -1,9 +1,6 @@
-:root {
-    --basefont: sans-serif;
-}
-
 body {
     background: #ececec;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #header {
@@ -19,10 +16,13 @@ body {
     padding-left: 10px;
 }
 
-#header p {
-    display: flex;
-    align-items: center;
-    padding-left: 10%;
+#header ul {
+    list-style-type: none;
+}
+
+#header ul li {
+    display: inline-block;
+    margin-left: 25px;
 }
 
 #boxgrid {
@@ -35,11 +35,12 @@ body {
     grid-template-areas:
         "pfp bx1 bx1"
         "abt bx2 bx3"
-        "abt bx4 bx5";
+        "cnt bx4 bx5";
 }
 
 #about {
     grid-area: abt;
+
 }
 
 #profileimage {
@@ -73,6 +74,11 @@ body {
     background-image: url(./Images/02-run-buddy.jpg);
 }
 
+#contact {
+    grid-area: cnt;
+    background-size: contain;
+}
+
 .boxgridarea {
     background-position: center;
     background-size: cover;
@@ -82,12 +88,30 @@ body {
     align-content: end;
 }
 
-/*footer area*/
-.contact {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    justify-content: space-evenly;
-    min-height: 10vh;
+h2 {
+    font-size: 30px;
+    margin: 110px 0px;
+    color: black;
+}
+
+@media only screen and (max-width: 600px) {
+    #header {
+        position: static;
+        margin: 20px;
+    }
+
+    #boxgrid {
+        grid-template-rows: 300px 300px 300px 300px 300px 300px 300px;
+        grid-template-columns: 80vw;
+        grid-template-areas:
+            "pfp"
+            "abt"
+            "cnt"
+            "bx1"
+            "bx2"
+            "bx3"
+            "bx4"
+            "bx5"
+        ;
+    }
 }
